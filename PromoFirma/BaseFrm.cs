@@ -10,11 +10,16 @@ using System.Windows.Forms;
 
 namespace PromoFirma
 {
-    public partial class Form1 : Form
+    public partial class BaseFrm : Form
     {
-        public Form1()
+        public BaseFrm()
         {
             InitializeComponent();
+        }
+
+        private void btnInpt_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
