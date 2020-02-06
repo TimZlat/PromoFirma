@@ -45,7 +45,7 @@ namespace PromoFirma
                             object Login = reader.GetValue(0);
                             object Passw = reader.GetValue(1);
                             object IdRole = reader.GetValue(2);
-                            MessageBox.Show(Login + " " + Passw + " " + IdRole);
+                            
                             FormRedirect(Convert.ToInt32(IdRole));
                         }
                         

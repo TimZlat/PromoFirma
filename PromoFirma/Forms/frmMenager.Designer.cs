@@ -28,21 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             this.dgView = new System.Windows.Forms.DataGridView();
             this.btnAdd = new System.Windows.Forms.Button();
             this.btnDel = new System.Windows.Forms.Button();
             this.btnSave = new System.Windows.Forms.Button();
-            this.cmbBox1 = new System.Windows.Forms.ComboBox();
-            this.тСотрудникBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.promoFirmaDataSet = new PromoFirma.PromoFirmaDataSet();
-            this.z2SotrActionBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.т_СотрудникTableAdapter = new PromoFirma.PromoFirmaDataSetTableAdapters.Т_СотрудникTableAdapter();
-            this.z2_Sotr_ActionTableAdapter = new PromoFirma.PromoFirmaDataSetTableAdapters.z2_Sotr_ActionTableAdapter();
+            this.cmbFam = new System.Windows.Forms.ComboBox();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgView)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.тСотрудникBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.promoFirmaDataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.z2SotrActionBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // dgView
@@ -80,47 +72,34 @@
             this.btnSave.Text = "Сохранить";
             this.btnSave.UseVisualStyleBackColor = true;
             // 
-            // cmbBox1
+            // cmbFam
             // 
-            this.cmbBox1.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.тСотрудникBindingSource, "Фамилия", true));
-            this.cmbBox1.DataSource = this.z2SotrActionBindingSource;
-            this.cmbBox1.DisplayMember = "Фамилия";
-            this.cmbBox1.FormattingEnabled = true;
-            this.cmbBox1.Location = new System.Drawing.Point(93, 70);
-            this.cmbBox1.Name = "cmbBox1";
-            this.cmbBox1.Size = new System.Drawing.Size(223, 24);
-            this.cmbBox1.TabIndex = 4;
-            this.cmbBox1.ValueMember = "КодСотрудника";
+            this.cmbFam.DisplayMember = "КодСотрудника";
+            this.cmbFam.FormattingEnabled = true;
+            this.cmbFam.Location = new System.Drawing.Point(12, 71);
+            this.cmbFam.Name = "cmbFam";
+            this.cmbFam.Size = new System.Drawing.Size(223, 24);
+            this.cmbFam.TabIndex = 4;
+            this.cmbFam.ValueMember = "КодСотрудника";
+            this.cmbFam.SelectedIndexChanged += new System.EventHandler(this.cmbFam_SelectedIndexChanged);
             // 
-            // тСотрудникBindingSource
+            // button1
             // 
-            this.тСотрудникBindingSource.DataMember = "Т_Сотрудник";
-            this.тСотрудникBindingSource.DataSource = this.promoFirmaDataSet;
-            // 
-            // promoFirmaDataSet
-            // 
-            this.promoFirmaDataSet.DataSetName = "PromoFirmaDataSet";
-            this.promoFirmaDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // z2SotrActionBindingSource
-            // 
-            this.z2SotrActionBindingSource.DataMember = "z2_Sotr_Action";
-            this.z2SotrActionBindingSource.DataSource = this.promoFirmaDataSet;
-            // 
-            // т_СотрудникTableAdapter
-            // 
-            this.т_СотрудникTableAdapter.ClearBeforeFill = true;
-            // 
-            // z2_Sotr_ActionTableAdapter
-            // 
-            this.z2_Sotr_ActionTableAdapter.ClearBeforeFill = true;
+            this.button1.Location = new System.Drawing.Point(281, 71);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(94, 24);
+            this.button1.TabIndex = 5;
+            this.button1.Text = "Сброс";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // frmMenager
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(657, 406);
-            this.Controls.Add(this.cmbBox1);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.cmbFam);
             this.Controls.Add(this.btnSave);
             this.Controls.Add(this.btnDel);
             this.Controls.Add(this.btnAdd);
@@ -131,9 +110,6 @@
             this.Text = "Окно Менеджера";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.frmMenager_FormClosed);
             ((System.ComponentModel.ISupportInitialize)(this.dgView)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.тСотрудникBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.promoFirmaDataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.z2SotrActionBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -144,11 +120,7 @@
         private System.Windows.Forms.Button btnAdd;
         private System.Windows.Forms.Button btnDel;
         private System.Windows.Forms.Button btnSave;
-        private System.Windows.Forms.ComboBox cmbBox1;
-        private PromoFirmaDataSet promoFirmaDataSet;
-        private System.Windows.Forms.BindingSource тСотрудникBindingSource;
-        private PromoFirmaDataSetTableAdapters.Т_СотрудникTableAdapter т_СотрудникTableAdapter;
-        private System.Windows.Forms.BindingSource z2SotrActionBindingSource;
-        private PromoFirmaDataSetTableAdapters.z2_Sotr_ActionTableAdapter z2_Sotr_ActionTableAdapter;
+        private System.Windows.Forms.ComboBox cmbFam;
+        private System.Windows.Forms.Button button1;
     }
 }
