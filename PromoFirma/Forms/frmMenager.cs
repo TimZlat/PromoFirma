@@ -16,7 +16,8 @@ namespace PromoFirma.Forms
         DataSet ds = new DataSet();
         SqlDataAdapter adapter;
         SqlCommandBuilder commandBuilder;
-        string StrConn = @"Data Source=MAM-PC\SQLEXPRESS;Integrated Security=True;Initial Catalog=PromoFirma;";
+        //string StrConn = @"Data Source=MAM-PC\SQLEXPRESS;Integrated Security=True;Initial Catalog=PromoFirma;";
+        string StrConn = @"Data Source=T215-3\SQLEXPRESS;Integrated Security=True;Initial Catalog=PromoFirma;";
         string sql = "SELECT * FROM z2_Sotr_Action;";
         string sqlF = "SELECT [Фамилия] FROM [Т_Сотрудник]";
 

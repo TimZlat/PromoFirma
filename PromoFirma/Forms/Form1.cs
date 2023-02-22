@@ -14,8 +14,8 @@ namespace PromoFirma
 {
     public partial class frmMain : Form
     {
-        string conString = @"Data Source=MAM-PC\SQLEXPRESS;Integrated Security=True;Initial Catalog=PromoFirma;";
-
+        //string conString = @"Data Source=MAM-PC\SQLEXPRESS;Integrated Security=True;Initial Catalog=PromoFirma;";
+        string conString = @"Data Source=T215-3\SQLEXPRESS;Integrated Security=True;Initial Catalog=PromoFirma;";
         public frmMain()
         {
             InitializeComponent();
